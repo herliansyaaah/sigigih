@@ -7,7 +7,7 @@ const Login = () => {
 	const generateRandomString = (length) => {
 		var text = '';
 		var possible =
-			'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz0123456789';
+			'0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
 
 		for (var i = 0; i < length; i++) {
 			text += possible.charAt(Math.floor(Math.random() * possible.length));
@@ -18,10 +18,10 @@ const Login = () => {
 	const handleLogin = (e) => {
 		e.preventDefault();
 		var stateKey = 'spotify_auth_state';
-		var client_id = String(process.env.REACT_APP_SPOTIFY_CLIENT_ID);
-		var redirect_uri = 'https://accounts.spotify.com/en/login';
+		var client_id = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
+		var redirect_uri = process.env.REACT_APP_REDIRECT_URL;
 
-		var state = generateRandomString(16);
+		var state = "KMFE5095Suherli";
 
 		localStorage.setItem(stateKey, state);
 		var scope = 'user-read-private user-read-email playlist-modify-private playlist-read-private';
