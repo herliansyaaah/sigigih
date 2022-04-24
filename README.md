@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Sepotify - Music App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is Final Project Generasi GIGIH 2.0 
 
 ## Available Scripts
 
